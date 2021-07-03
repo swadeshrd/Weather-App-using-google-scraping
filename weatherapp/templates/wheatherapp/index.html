@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+        }
+        #main {
+            text-align: center;
+            padding-top: 50px;
+        }
+        input[type="text"] {
+            width: 30%;
+            padding: 10px;
+            border: 2px solid black;
+            margin-bottom: 5px;
+        }
+        input[type="submit"] {
+            width: 30%;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Find the Weather</h1><br>
+        <form method="GET">
+            <label for="city"></label>
+            <input type="text" name="city" id="city" placeholder="Enter Your City ...">
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+        {% if weather %}
+        <h3>{{ weather.region }}</h3>
+        <h3>{{ weather.dayTime }}</h3>
+        <h3>{{ weather.temp }} °C</h3>
+        <h3>Precipitation: {{ weather.precipitation }}</h3>
+        <h3>Humidity: {{ weather.humidity }}</h3>
+        <h3>Wind: {{ weather.wind }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
