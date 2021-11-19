@@ -1,6 +1,6 @@
 # WEATHER APP USING Google Scrapping
 
-![image](img.png?raw=true)
+![image](image.png?raw=true)
 
 ## Developer Installation Guide (Windows)
 
