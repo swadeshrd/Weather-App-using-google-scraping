@@ -1,0 +1,6 @@
+django==3.2.9
+requests==2.26.0
+bs4
+black
+flake8
+isort
